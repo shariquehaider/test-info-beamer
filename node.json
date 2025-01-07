@@ -8,7 +8,7 @@
     },
     {
       "title": "Set Timer",
-      "type": "int",
+      "type": "duration",
       "name": "timer",
       "ui_width": 2,
       "default": 5
