@@ -8,6 +8,6 @@ local font = resource.load_font "roboto.ttf"
 
 function node.render()
   gl.clear(0, 0, 0, 0)
-  font:write(500,10, "Hello", 1,1,1,1)
+  font:write(500,10, "Hello", 1,0,1,1)
 
 end
