@@ -107,6 +107,19 @@ local function draw_progress(starts, ends, now)
   end
 end
 
+function create_clock() 
+  local size = 80
+  local time = os.date("*t")
+  local hours = time.hour % 12
+  local minutes = time.min
+  local seconds = time.sec
+  local w = font:width(hours, size)
+
+  font:write((WIDTH-w)/2, (HEIGHT-size)/2, hours, size,1,1,1,alpha)
+
+end
+
 function node.render()
   gl.clear(0, 0, 0, 0)
+  create_clock();
 end
