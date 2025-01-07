@@ -1,45 +1,37 @@
 {
-  "name": "Player",
-  "expand_schedules": true,
+  "name": "Countdown",
+  "control_ui": "control.html",
   "options": [{
-      "title": "Configuration",
-      "type": "section"
+    "title": "Presentation",
+    "type": "section"
   }, {
-      "title": "Display rotation",
-      "ui_width": 3,
-      "name": "rotation",
-      "type": "select",
-      "hint": "Rotate content clockwise?",
-      "doc_link": true,
-      "options": [
-          [0, "None"],
-          [90, "90°"],
-          [180, "180°"],
-          [270, "270°"]
-      ],
-      "default": 0
+    "title": "Foreground",
+    "ui_width": 4,
+    "name": "fg",
+    "type": "color",
+    "default": [1, 1, 1, 1]
   }, {
-      "title": "Progress indicator",
-      "ui_width": 3,
-      "name": "progress",
-      "type": "select",
-      "hint": "Shows how long the current playlist item is displayed",
-      "doc_link": true,
-      "options": [
-          ["no", "Disabled"],
-          ["bar_thin_white", "Bar (thin, white)"],
-          ["bar_thick_white", "Bar (thick, white)"],
-          ["bar_thin_black", "Bar (thin, black)"],
-          ["bar_thick_black", "Bar (thick, black)"],
-          ["circle", "Circle"],
-          ["countdown", "Countdown"]
-      ],
-      "default": "no"
+    "title": "Background",
+    "ui_width": 4,
+    "name": "bg",
+    "type": "color",
+    "default": [0, 0, 0, 1]
   }, {
-    "title": "Timer",
-    "ui_width": 3,
-    "name": "timer",
-    "type": "duration",
-    "default": 5
+    "title": "Font Size",
+    "ui_width": 4,
+    "name": "size",
+    "type": "select",
+    "options": [
+        [5, "Small"],
+        [4, "Middle"],
+        [3, "Large"]
+    ],
+    "default": 4
+  },
+  
+  {
+    "title": "Controlling",
+    "type": "section",
+    "intro": "You cannot control the countdown from this page. Instead, assign this setup to a device, then visit the device page. You'll find a new control panel with buttons to control the countdown."
   }]
 }

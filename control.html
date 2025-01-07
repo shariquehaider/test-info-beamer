@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <div class="row">
+      <div class="col-xs-6">
+        <div class="input-group">
+          <input id='minutes' type="number" min='1' class="form-control" placeholder="Minutes" value="10">
+          <span class="input-group-btn">
+            <button id='set' class="btn btn-default" type="button">
+              Set minutes
+            </button>
+          </span>
+        </div>
+      </div>
+      <div class="col-xs-3">
+        <button id='play' class='btn btn-default btn-block'>
+          <span class='glyphicon glyphicon-play'></span>
+        </button>
+      </div>
+      <div class="col-xs-3">
+        <button id='pause' class='btn btn-default btn-block'>
+          <span class='glyphicon glyphicon-pause'></span>
+        </button>
+      </div>
+    </div>
+    <!-- Provides the interface to info-beamer hosted -->
+    <script src="hosted.js"></script>
+
+    <script>
+      // Add CSS style, so the interface has the same look & feel like
+      // the rest of the info-beamer hosted interface. It's bootstrap 3.
+      ib.setDefaultStyle();
+
+      document.getElementById('set').addEventListener('click', function(evt) {
+        ib.sendCommand('set', document.getElementById('minutes').value);
+      });
+
+      document.getElementById('play').addEventListener('click', function(evt) {
+        ib.sendCommand('play', '');
+      });
+
+      document.getElementById('pause').addEventListener('click', function(evt) {
+        ib.sendCommand('pause', '');
+      });
+    </script>
+  </body>
+</html>
