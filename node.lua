@@ -3,7 +3,7 @@ gl.setup(NATIVE_WIDTH, NATIVE_HEIGHT)
 util.no_globals()
 
 local font = resource.load_font "roboto.ttf"
-
+local background_image = resource.load_image("background.png")
 local remaining = 0
 local total = 0
 local started
@@ -68,6 +68,7 @@ function node.render()
     local target_x = (WIDTH-w)/2
     x = x + clamp((target_x-x) / 10, -10, 10)
     font:write(x, (HEIGHT-size)/2, text, size, unpack(config.fg.rgba))
+    gl:draw(background_image, 0, 0)
     if not started and sys.now()%2 > 1 then
         local w = font:width("II", size/2)
         font:write((WIDTH-w)/2, (HEIGHT+size)/2, "II", size/2, unpack(config.fg.rgba))
