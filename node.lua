@@ -109,6 +109,7 @@ end
 
 function create_clock() 
   local size = 80
+  local alpha = -1
   local time = os.date("*t")
   local hours = time.hour % 12
   local minutes = time.min
@@ -122,4 +123,5 @@ end
 function node.render()
   gl.clear(0, 0, 0, 0)
   create_clock();
+
 end
