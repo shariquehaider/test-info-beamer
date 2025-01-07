@@ -36,5 +36,7 @@ function node.render()
   gl.clear(0, 0, 0, 1)
   local currentTime = getCurrentTime()
   renderClock(currentTime)
+  font:write(500, 500, "Hidsadasdasdasd", 100, 1, 1, 1, 1) 
+
   renderSchedule()   
 end
