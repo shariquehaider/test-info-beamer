@@ -1,19 +1,5 @@
 local font = resource.load_font("assets/font.ttf")
 
-function loadScheduleFromCSV()
-  local schedule = {}
-  local file = sys.get_ext("Default.csv")
-  
-  -- Read CSV file line by line
-  for line in file:lines() do
-      local time, event = line:match("([^,]+),([^,]+)")
-      if time and event then
-          table.insert(schedule, {time, event})
-      end
-  end
-  return schedule
-end
-
 local schedule = loadScheduleFromCSV() or {
   {"09:00", "Team Meeting"},
     {"10:30", "Project Planning"},
@@ -23,15 +9,11 @@ local schedule = loadScheduleFromCSV() or {
 }
 
 function getCurrentTime()
-  local time = os.date("*t")
-  return string.format("%02d:%02d", time.hour, time.min)
+  return os.date("%H:%M:%S")  -- Use "%H:%M" if you want hours and minutes only
 end
 
 
-function renderClock()
-  local currentTime = getCurrentTime()
-
-  gl.clear(0, 0, 0, 1)
+function renderClock(currentTime)
 
   font:write(500, 50, currentTime, 100, 1, 1, 1, 1) 
 end
@@ -51,6 +33,8 @@ function renderSchedule()
 end
 
 function node.render()
-  renderClock()   
+  gl.clear(0, 0, 0, 1)
+  local currentTime = getCurrentTime()
+  renderClock(currentTime)
   renderSchedule()   
 end
