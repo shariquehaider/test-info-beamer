@@ -1,7 +1,23 @@
 {
   "name": "test-info-beamer",
   "version": "1.0.0",
-  "description": "clock package for info-beamer",
+  "des": "clock package for info-beamer",
+  "repository": "https://github.com/shariquehaider/test-info-beamer.git",
+  "platforms": [
+    "pi/v6",
+    "pi/v7",
+    "pi/v8"
+  ],
+  "offline": {
+    "support": "maybe",
+    "info": "Synced playback will not work without correct system time"
+  },
+  "nesting": {
+    "parents": [
+      "top-level"
+    ],
+    "childs": []
+  },
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
