@@ -35,5 +35,11 @@
           ["countdown", "Countdown"]
       ],
       "default": "no"
+  }, {
+    "title": "Timer",
+    "ui_width": 3,
+    "name": "timer",
+    "type": "duration",
+    "default": 5
   }]
 }

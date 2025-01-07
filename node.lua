@@ -8,6 +8,7 @@ local font = resource.load_font "roboto.ttf"
 local config = (function()
   local rotation = 0
   local progress = "no"
+  local timer = 5
   local config_file = "config.json"
 
   if CONTENTS["static-config.json"] then
@@ -18,9 +19,8 @@ local config = (function()
   util.json_watch(config_file, function(config)
     print("updated " .. config_file)
 
-    synced = config.synced
     progress = config.progress
-
+    timer = config.timer
     if config.idle.filename == "loading.png" then
         idle_img = nil
     else
@@ -28,7 +28,6 @@ local config = (function()
     end
 
     rotation = config.rotation
-    portrait = rotation == 90 or rotation == 270
 
     gl.setup(NATIVE_WIDTH, NATIVE_HEIGHT)
     transform = util.screen_transform(rotation)
@@ -62,6 +61,7 @@ local config = (function()
     end
   end)
   return {
+    get_timer = function() return timer end;
     get_progress = function() return progress end;
     get_rotation = function() return rotation, portrait end;
 }
@@ -107,21 +107,58 @@ local function draw_progress(starts, ends, now)
   end
 end
 
-function create_clock() 
-  local size = 80
-  local alpha = -1
-  local time = os.date("*t")
-  local hours = time.hour % 12
-  local minutes = time.min
-  local seconds = time.sec
-  local w = font:width(hours, size)
+function get_ist_time()
+  local utc_time = os.time()
+  local ist_offset = 5 * 60 * 60 + 30 * 60 
+  local ist_time = utc_time + ist_offset
 
-  font:write((WIDTH-w)/2, (HEIGHT-size)/2, hours, size,1,1,1,alpha)
+  return ist_time
+end
 
+function format_time(seconds)
+  local hours = math.floor(seconds / 3600)
+  local minutes = math.floor((seconds % 3600) / 60)
+  local secs = seconds % 60
+  return string.format("%02d:%02d:%02d", hours, minutes, secs)
+end
+
+function get_target_time()
+  local current_ist_time = get_ist_time()
+
+  local targetTimeInt = config.get_timer()
+  local target_time = current_ist_time + (targetTimeInt * 60) 
+  return target_time
+end
+
+function format_time(seconds)
+  local hours = math.floor(seconds / 3600)
+  local minutes = math.floor((seconds % 3600) / 60)
+  local secs = seconds % 60
+  return string.format("%02d:%02d:%02d", hours, minutes, secs)
+end
+
+
+function countdown()
+  local target_time = get_target_time()
+
+  while true do
+      local current_ist_time = get_ist_time()
+
+      local remaining_time = target_time - current_ist_time
+
+      if remaining_time <= 0 then
+          print("Countdown finished!")
+          break
+      end
+
+      local formatted_time = format_time(remaining_time)
+      font:write(500, 50,formatted_time, 80, 1,1,1,1)
+
+  end
 end
 
 function node.render()
   gl.clear(0, 0, 0, 0)
-  create_clock();
+  countdown()
 
 end
