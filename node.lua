@@ -1,8 +1,7 @@
 gl.setup(NATIVE_WIDTH, NATIVE_HEIGHT)
 
 util.no_globals()
-local white = resource.create_colored_texture(1,1,1,1)
-local black = resource.create_colored_texture(0,0,0,1)
+
 local font = resource.load_font "roboto.ttf"
 
 
