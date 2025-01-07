@@ -7,6 +7,13 @@
       "type": "section"
     },
     {
+      "title": "Set Timer",
+      "type": "int",
+      "name": "timer",
+      "ui_width": 2,
+      "default": 5
+    },
+    {
       "title": "Progress indicator",
       "ui_width": 3,
       "name": "progress",
@@ -59,15 +66,6 @@
           [270, "270°"]
       ],
       "default": 0
-  },
-  {
-    "title": "Idle image",
-    "ui_width": 3,
-    "name": "idle",
-    "type": "resource",
-    "doc_link": true,
-    "valid": ["csv"],
-    "default": "Default.csv"
   }
   ],
   "clock_color": {
