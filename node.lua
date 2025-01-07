@@ -1,4 +1,4 @@
-local font = resource.load_font("assets/font.ttf")
+local font = resource.load_font("assets/roboto.ttf")
 
 local schedule = loadScheduleFromCSV() or {
   {"09:00", "Team Meeting"},
