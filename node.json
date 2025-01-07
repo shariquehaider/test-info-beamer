@@ -7,11 +7,59 @@
       "type": "section"
     },
     {
-      "title": "Select CSV File",
+      "title": "Progress indicator",
       "ui_width": 3,
-      "name": "csv_file",
-      "doc_link": true
-    }
+      "name": "progress",
+      "type": "select",
+      "hint": "Shows how long the current playlist item is displayed",
+      "doc_link": true,
+      "options": [
+        [
+          "no",
+          "Disabled"
+        ],
+        [
+          "bar_thin_white",
+          "Bar (thin, white)"
+        ],
+        [
+          "bar_thick_white",
+          "Bar (thick, white)"
+        ],
+        [
+          "bar_thin_black",
+          "Bar (thin, black)"
+        ],
+        [
+          "bar_thick_black",
+          "Bar (thick, black)"
+        ],
+        [
+          "circle",
+          "Circle"
+        ],
+        [
+          "countdown",
+          "Countdown"
+        ]
+      ],
+      "default": "no"
+    },
+    {
+      "title": "Display rotation",
+      "ui_width": 3,
+      "name": "rotation",
+      "type": "select",
+      "hint": "Rotate content clockwise?",
+      "doc_link": true,
+      "options": [
+          [0, "None"],
+          [90, "90°"],
+          [180, "180°"],
+          [270, "270°"]
+      ],
+      "default": 0
+  }
   ],
   "schedule": {
     "type": "file",
