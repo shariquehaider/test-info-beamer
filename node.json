@@ -1,4 +1,6 @@
 {
+  "name": "clock",
+  "expand_schedules": true,
   "schedule": {
     "type": "file",
     "label": "Upload Schedule (CSV)",
