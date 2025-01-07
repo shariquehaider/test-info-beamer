@@ -1,6 +1,6 @@
 gl.setup(NATIVE_WIDTH, NATIVE_HEIGHT)
 
-local font = resource.load_font "assets/roboto.ttf"
+local font = resource.load_font "roboto.ttf"
 
 
 local remaining = 0
