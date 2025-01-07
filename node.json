@@ -1,6 +1,18 @@
 {
   "name": "clock",
   "expand_schedules": true,
+  "options": [
+    {
+      "title": "Configuration",
+      "type": "section"
+    },
+    {
+      "title": "Select CSV File",
+      "ui_width": 3,
+      "name": "csv_file",
+      "doc_link": true
+    }
+  ],
   "schedule": {
     "type": "file",
     "label": "Upload Schedule (CSV)",
@@ -9,7 +21,12 @@
   "clock_color": {
     "type": "color",
     "label": "Clock Color",
-    "default": [255, 255, 255, 255]
+    "default": [
+      255,
+      255,
+      255,
+      255
+    ]
   },
   "font_size": {
     "type": "int",
