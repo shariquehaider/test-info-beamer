@@ -8,7 +8,7 @@
     },
     {
       "title": "timer_duration",
-      "type": "int",
+      "type": "duration",
       "label": "Set Timer Duration (seconds)",
       "default": 60,
       "min": 10,
