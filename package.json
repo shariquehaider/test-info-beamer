@@ -1,7 +1,7 @@
 {
   "name": "test-info-beamer",
   "version": "1.0.0",
-  "des": "clock package for info-beamer",
+  "desc": "clock package for info-beamer",
   "repository": "https://github.com/shariquehaider/test-info-beamer.git",
   "platforms": [
     "pi/v6",
