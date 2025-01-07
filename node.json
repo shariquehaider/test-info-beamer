@@ -1,0 +1,17 @@
+{
+  "schedule": {
+    "type": "file",
+    "label": "Upload Schedule (CSV)",
+    "default": "schedule.csv"
+  },
+  "clock_color": {
+    "type": "color",
+    "label": "Clock Color",
+    "default": [255, 255, 255, 255]
+  },
+  "font_size": {
+    "type": "int",
+    "label": "Font Size for Schedule",
+    "default": 40
+  }
+}
