@@ -1,0 +1,36 @@
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,24 October 2024,,,,,,25 October 2024,,,,
+,,Start,End,Talks (Salon A+B+C),Workshop (Salon 4+5),,,Start,End,Talks (Salon A+B+C),Workshop (Salon 4+5),
+,,8:15,9:20,Registration,,,,,,,,
+,,9:20,9:30,Opening Note,,,,,,,,
+,,9:30,10:10,[Keynote] Side Channel Attacks: Lessons Learned or Troubles Ahead? By Daniel Genkin,,,,9:30,10:10,TBA,,
+,,10:15,10:55,EUCLEAK by Thomas Roche,,,,10:15,10:55,Escaping the sandbox: Side Channel Shenanigans on Our DIY Chip by Jasper van Woudenberg,,"Firmware Security Village 
+|
+The Donjon Hardware Attack Tool Suite - Fault Injection  "
+,,10:55,11:15,Coffee Break,,,,10:55,11:15,Coffee Break,,
+,,11:20,12:00,EL3XIR: Fuzzing COTS Secure Monitors by Marcel Busch,,"Firmware Security Village 
+|  
+The Donjon Hardware Attack Tool Suite - Fault Injection  ",,11:20,12:00,"Fuzzing GPRS Layer-2 for Fun and Profit , Dyon Goos,
+Marius Muench",,"Firmware Security Village 
+|
+The Donjon Hardware Attack Tool Suite - Fault Injection  "
+,,12:05,12:45," Hacking EV charging stations via the charging cable by Wilco van Beijnum,
+Harm van den Brink",,,,12:05,12:45,ARM MTE: The End of Memory Corruption? Not Yet.        Juhee Kim,,
+,,12:45,14:00,Lunch Break,,,,12:45,14:00,Lunch Break,,
+,,14:00,14:40, HAWKEYE – Recovering Symmetric Cryptography From Hardware Circuits by Julian Speith,[WORKSHOP] One for all and all for WHAD: wireless shenanigans made easy! By Damien and Romain ,"Firmware Security Village 
+|  
+The Donjon Hardware Attack Tool Suite - Fault Injection  ",,14:00,14:40,Bluetooth Low Energy GATT Fuzzing: from specification to implementation        Baptiste Boyer,[WORKSHOP] Getting Started with Automotive Ethernet Security Testing by Enrico Pozzobon,"Firmware Security Village 
+|
+The Donjon Hardware Attack Tool Suite - Fault Injection  "
+,,14:45,15:25, Is Your Memory Protected? Uncovering Hidden Vulnerabilities in Automotive MPU Mechanisms by Nimrod Stoler,,,,14:45,15:25,Google Nest Wifi Pro Bypassing Android Verified Boot by Sergei Volokitin,,
+,,15:30,16:10,Byepervisor: How We Broke the PS5 Hypervisor by SpecterDev,,,,15:30,16:10,[Panel],,
+,,16:10,16:25,Coffee Break,,,,16:10,16:25,Coffee Break,,
+,,16:25,17:05,MIFARE Classic: exposing the static encrypted nonce variant by Philippe Teuwen,,"Firmware Security Village 
+|
+The Donjon Hardware Attack Tool Suite - Fault Injection  ",,16:25,17:00,"Hardpwn & CTF Prize Ceremoany
+Closing Notes",,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,19:00,21:30,Invite Only Dinner & Drinks,,,,,,,,

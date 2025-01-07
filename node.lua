@@ -1,6 +1,20 @@
 local font = resource.load_font("assets/font.ttf")
 
-local schedule = {
+function loadScheduleFromCSV()
+  local schedule = {}
+  local file = sys.get_ext("Default.csv")
+  
+  -- Read CSV file line by line
+  for line in file:lines() do
+      local time, event = line:match("([^,]+),([^,]+)")
+      if time and event then
+          table.insert(schedule, {time, event})
+      end
+  end
+  return schedule
+end
+
+local schedule = loadScheduleFromCSV() or {
   {"09:00", "Team Meeting"},
     {"10:30", "Project Planning"},
     {"12:00", "Lunch Break"},

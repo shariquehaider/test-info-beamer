@@ -59,13 +59,17 @@
           [270, "270°"]
       ],
       "default": 0
+  },
+  {
+    "title": "Idle image",
+    "ui_width": 3,
+    "name": "idle",
+    "type": "resource",
+    "doc_link": true,
+    "valid": ["csv"],
+    "default": "Default.csv"
   }
   ],
-  "schedule": {
-    "type": "file",
-    "label": "Upload Schedule (CSV)",
-    "default": "schedule.csv"
-  },
   "clock_color": {
     "type": "color",
     "label": "Clock Color",
